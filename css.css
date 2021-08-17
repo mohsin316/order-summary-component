@@ -1,0 +1,160 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --paleB:hsl(220, 20%, 94%);
+    --brightB:hsl(245, 75%, 52%);
+    --verypaleB:hsl(225, 100%, 98%);
+    --desatB:hsl(224, 23%, 55%);
+    --darkB:hsl(223, 47%, 23%);
+
+    --ff: 'Red Hat Display', sans-serif;
+    --fwL:500;
+    --fwM:700;
+    --fwB:900;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+body{
+   background-image: url("/images/pattern-background-mobile.svg");
+   background-repeat:no-repeat;
+   background-size: cover;
+   font-family: var(--ff);
+   display: grid;
+   place-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-block: 4rem;
+    
+}
+
+.image_container{
+    width:100%;
+    max-width: 100%;
+}
+
+.content_container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--verypaleB);
+}
+
+.desc_container{
+    text-align: center;
+    padding: 2rem;
+}
+
+h1{
+    font-size: 1.5rem;
+    margin-bottom: 1.75rem;
+    margin-top: .25rem;
+    font-weight: var(--fwB);
+    color: var(--darkB);
+}
+.description{
+    line-height: 1.75rem;
+    color: var(--desatB);
+}
+
+.price_container{
+    background-color:var(--paleB);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 15px;
+
+}
+
+.holder1{
+    display: flex;
+    align-items: center;
+    gap: 1.15rem;
+}
+.holder2{
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+}
+
+.plan{
+    color: var(--darkB);
+    font-weight: var(--fwB);
+}
+.pay{
+    color: var(--desatB);
+}
+.change{
+    color: var(--brightB);
+    font-weight: var(--fwM);
+}
+
+button{
+    background-color: var(--brightB);
+    width: 90%;
+    margin-top: 2rem;
+    padding-block: 1rem;
+    text-decoration: none;
+    border: var(--brightB);
+    font-weight: var(--fwM);
+    color: var(--paleB);
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cancel{
+    display: inline-block;
+    margin: 2rem;
+    color: var(--desatB);
+    font-weight: var(--fwM);
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: hsla(245, 75%, 52%, 0.76);
+}
+
+.change:hover{
+    color:hsla(245, 75%, 52%, 0.658);
+}
+
+.cancel:hover{
+    color: black;
+
+}
+@media screen and (min-width:1000px) {
+    body{
+        background-image: url("/images/pattern-background-desktop.svg");
+        background-repeat:no-repeat;
+        background-size: cover;
+        font-family: var(--ff);
+        display: grid;
+        place-items: center;
+    }
+    .container{
+        max-width: 400px;
+    }
+    .price_container,button{
+        max-width: 80%;
+    }
+}
